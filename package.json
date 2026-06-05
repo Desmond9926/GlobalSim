@@ -1,0 +1,19 @@
+{
+  "name": "globalsim",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "backend:dev": ".venv/bin/uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000",
+    "frontend:dev": "npm --prefix frontend run dev",
+    "dev": "npm --prefix frontend run dev",
+    "dev:all": "bash dev.sh",
+    "doctor": "bash doctor.sh",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend run test",
+    "playwright:test": "npx playwright test",
+    "playwright:list": "npx playwright test --list"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}

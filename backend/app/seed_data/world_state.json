@@ -1,0 +1,181 @@
+{
+  "seed_version": "phase1-core-world-state-v1",
+  "agents": [
+    {
+      "id": "china",
+      "name": "China",
+      "type": "country",
+      "goals": ["national_security", "economic_growth", "tech_self_reliance"],
+      "capabilities": {
+        "military": 0.85,
+        "economy": 0.9,
+        "technology": 0.82,
+        "energy": 0.75,
+        "diplomacy": 0.8
+      }
+    },
+    {
+      "id": "usa",
+      "name": "USA",
+      "type": "country",
+      "goals": ["alliance_leadership", "economic_resilience", "strategic_deterrence"],
+      "capabilities": {
+        "military": 0.95,
+        "economy": 0.94,
+        "technology": 0.92,
+        "energy": 0.83,
+        "diplomacy": 0.86
+      }
+    },
+    {
+      "id": "russia",
+      "name": "Russia",
+      "type": "country",
+      "goals": ["security_buffer", "energy_leverage", "strategic_autonomy"],
+      "capabilities": {
+        "military": 0.82,
+        "economy": 0.58,
+        "technology": 0.62,
+        "energy": 0.91,
+        "diplomacy": 0.63
+      }
+    },
+    {
+      "id": "eu",
+      "name": "EU",
+      "type": "bloc",
+      "goals": ["regional_stability", "economic_competitiveness", "rules_based_order"],
+      "capabilities": {
+        "military": 0.64,
+        "economy": 0.88,
+        "technology": 0.8,
+        "energy": 0.69,
+        "diplomacy": 0.9
+      }
+    },
+    {
+      "id": "nato",
+      "name": "NATO",
+      "type": "alliance",
+      "goals": ["collective_defense", "deterrence", "alliance_cohesion"],
+      "capabilities": {
+        "military": 0.93,
+        "economy": 0.78,
+        "technology": 0.86,
+        "energy": 0.7,
+        "diplomacy": 0.82
+      }
+    },
+    {
+      "id": "un",
+      "name": "UN",
+      "type": "institution",
+      "goals": ["conflict_prevention", "humanitarian_coordination", "international_norms"],
+      "capabilities": {
+        "military": 0.2,
+        "economy": 0.45,
+        "technology": 0.55,
+        "energy": 0.35,
+        "diplomacy": 0.95
+      }
+    }
+  ],
+  "relations": [
+    {
+      "source": "china",
+      "target": "usa",
+      "friendliness": -0.62,
+      "trade_dependency": 0.82,
+      "military_tension": 0.74,
+      "summary": "High economic interdependence with strategic and technology competition."
+    },
+    {
+      "source": "usa",
+      "target": "eu",
+      "friendliness": 0.72,
+      "trade_dependency": 0.74,
+      "military_tension": 0.18,
+      "summary": "Broad alignment with recurring trade and regulatory differences."
+    },
+    {
+      "source": "usa",
+      "target": "nato",
+      "friendliness": 0.88,
+      "trade_dependency": 0.43,
+      "military_tension": 0.08,
+      "summary": "Core security alignment through collective defense commitments."
+    },
+    {
+      "source": "eu",
+      "target": "nato",
+      "friendliness": 0.79,
+      "trade_dependency": 0.36,
+      "military_tension": 0.1,
+      "summary": "Overlapping membership and coordination on regional security."
+    },
+    {
+      "source": "russia",
+      "target": "nato",
+      "friendliness": -0.78,
+      "trade_dependency": 0.22,
+      "military_tension": 0.86,
+      "summary": "Persistent military tension across European security issues."
+    },
+    {
+      "source": "russia",
+      "target": "eu",
+      "friendliness": -0.48,
+      "trade_dependency": 0.42,
+      "military_tension": 0.66,
+      "summary": "Energy and security disputes shape a strained relationship."
+    },
+    {
+      "source": "china",
+      "target": "russia",
+      "friendliness": 0.48,
+      "trade_dependency": 0.56,
+      "military_tension": 0.2,
+      "summary": "Selective strategic coordination with asymmetric economic links."
+    },
+    {
+      "source": "china",
+      "target": "eu",
+      "friendliness": 0.18,
+      "trade_dependency": 0.71,
+      "military_tension": 0.24,
+      "summary": "Substantial trade ties alongside policy and technology frictions."
+    },
+    {
+      "source": "un",
+      "target": "china",
+      "friendliness": 0.36,
+      "trade_dependency": 0.12,
+      "military_tension": 0.05,
+      "summary": "Institutional engagement through multilateral mechanisms."
+    },
+    {
+      "source": "un",
+      "target": "usa",
+      "friendliness": 0.34,
+      "trade_dependency": 0.1,
+      "military_tension": 0.05,
+      "summary": "Institutional engagement through multilateral mechanisms."
+    },
+    {
+      "source": "un",
+      "target": "russia",
+      "friendliness": 0.12,
+      "trade_dependency": 0.08,
+      "military_tension": 0.11,
+      "summary": "Institutional engagement amid recurring Security Council disputes."
+    },
+    {
+      "source": "un",
+      "target": "eu",
+      "friendliness": 0.58,
+      "trade_dependency": 0.14,
+      "military_tension": 0.03,
+      "summary": "Strong support for multilateral coordination and humanitarian work."
+    }
+  ]
+}

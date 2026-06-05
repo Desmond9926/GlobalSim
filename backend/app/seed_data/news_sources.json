@@ -1,0 +1,23 @@
+[
+  {
+    "id": "bbc-world",
+    "name": "BBC News World",
+    "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "category": "global_media",
+    "enabled": true
+  },
+  {
+    "id": "un-news",
+    "name": "UN News",
+    "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+    "category": "institution",
+    "enabled": true
+  },
+  {
+    "id": "white-house-presidential-actions",
+    "name": "White House Presidential Actions",
+    "url": "https://www.whitehouse.gov/presidential-actions/feed/",
+    "category": "government",
+    "enabled": false
+  }
+]
