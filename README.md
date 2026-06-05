@@ -10,10 +10,23 @@ GlobalSim is a local single-user MVP for multi-agent geopolitical simulation. It
 
 ## Setup
 
+macOS/Linux:
+
 ```bash
 cp .env.example .env
 python3 -m venv .venv
 .venv/bin/pip install -r requirements-dev.txt
+npm install
+npm --prefix frontend install
+npx playwright install chromium
+```
+
+Windows PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+py -3.12 -m venv .venv
+.\.venv\Scripts\python -m pip install -r requirements-dev.txt
 npm install
 npm --prefix frontend install
 npx playwright install chromium
@@ -36,10 +49,20 @@ LLM_API_KEY=
 
 ## Start
 
-Run both backend and frontend with one command:
+On macOS/Linux, run both backend and frontend with one command:
 
 ```bash
 ./dev.sh
+```
+
+On Windows PowerShell, start the backend and frontend in separate terminals:
+
+```powershell
+.\.venv\Scripts\python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+```powershell
+npm --prefix frontend run dev
 ```
 
 Open:
@@ -56,21 +79,29 @@ http://127.0.0.1:8000
 
 Stop both services with `Ctrl+C`.
 
-After the services are running, check local readiness with:
+After the services are running, check local readiness on macOS/Linux with:
 
 ```bash
 ./doctor.sh
 ```
 
-Before starting services, you can run dependency-only checks with:
+Before starting services, you can run dependency-only checks on macOS/Linux with:
 
 ```bash
 ./doctor.sh --offline
 ```
 
+On Windows PowerShell, use these equivalent readiness checks:
+
+```powershell
+Invoke-WebRequest http://127.0.0.1:8000/api/health -UseBasicParsing
+Invoke-WebRequest http://127.0.0.1:8000/api/runtime/status -UseBasicParsing
+Invoke-WebRequest http://127.0.0.1:5173 -UseBasicParsing
+```
+
 The settings page also shows runtime diagnostics from `/api/runtime/status`, including API address, SQLite reachability, seed counts, news-source count, and LLM mode.
 
-You can also start services separately:
+You can also start services separately on macOS/Linux:
 
 ```bash
 npm run backend:dev
@@ -113,11 +144,22 @@ Use the console at `http://127.0.0.1:5173`:
 
 ## Checks
 
+macOS/Linux:
+
 ```bash
 .venv/bin/pytest
 npm --prefix frontend run test
 npm run build
 ./doctor.sh
+npx playwright test
+```
+
+Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\pytest
+npm --prefix frontend run test
+npm run build
 npx playwright test
 ```
 

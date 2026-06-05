@@ -99,3 +99,9 @@
 - Added `doctor.sh` and `npm run doctor` for local startup verification after `./dev.sh`; the script checks `.env`, backend/frontend dependencies, frontend unit tests, backend health/runtime endpoints, and frontend reachability without using macOS-incompatible `wait -n`.
 - Added `doctor.sh --offline` for dependency-only preflight checks in environments that cannot bind local service ports.
 - Updated README with startup self-check instructions and documented the new runtime status API.
+
+## 2026-06-05: Windows README commands
+
+- Added Windows PowerShell setup, startup, readiness, and check commands to `README.md`.
+- Kept the existing `dev.sh`, `doctor.sh`, and `.venv/bin/*` examples scoped to macOS/Linux because those paths depend on Unix shell conventions.
+- Documented direct Windows backend startup through `.\.venv\Scripts\python -m uvicorn ...` so Windows users do not depend on the Unix-only `npm run backend:dev` script.

@@ -412,3 +412,16 @@ npx playwright test
 - 每阶段都必须能独立验收，不接受“等最后一起验证”。
 - E2E 采用 Playwright，核心流程必须自动化覆盖。
 - TaskBoard.md 创建时不执行实现，只写任务板。
+
+## Documentation Maintenance
+
+### 2026-06-05: Windows README commands
+
+- [x] Added Windows PowerShell setup commands to `README.md`.
+- [x] Added Windows PowerShell backend/frontend startup commands to `README.md`.
+- [x] Added Windows PowerShell readiness and verification commands to `README.md`.
+- [x] Preserved the existing macOS/Linux command paths and documented platform scope explicitly.
+
+### Verification
+
+- [x] Documentation-only change reviewed with `git diff -- README.md docs/TaskBoard.md docs/decision_log.md`.
